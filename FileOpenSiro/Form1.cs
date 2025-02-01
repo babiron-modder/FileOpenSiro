@@ -18,9 +18,11 @@ namespace FileOpenSiro
         public static extern bool SetForegroundWindow(IntPtr hWnd);
 
         IntPtr current_window_hWnd;
+        IDataObject tmp_clipboard_data;
         public string CopySelectedText()
         {
             SetForegroundWindow(current_window_hWnd);
+            tmp_clipboard_data = Clipboard.GetDataObject();
 
             SendKeys.SendWait("^{c}");
 
@@ -40,7 +42,7 @@ namespace FileOpenSiro
             {
                 
             }
-
+            Clipboard.SetDataObject(tmp_clipboard_data);
             return selectedText;
         }
 
