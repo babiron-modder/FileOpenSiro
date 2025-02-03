@@ -156,6 +156,11 @@ namespace FileOpenSiro
             {
                 foreach (var line in File.ReadAllLines(whitelist))
                 {
+                    tmp = line.Trim().Trim('\"').ToLower();
+                    if (tmp.StartsWith("#") || tmp.Length == 0)
+                    {
+                        continue;
+                    }
                     white_list.Add(line.Trim().Trim('\"'));
                 }
             }
