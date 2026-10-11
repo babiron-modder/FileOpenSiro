@@ -35,6 +35,7 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.終了ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ファイルの場所を開くToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,16 +64,24 @@
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ファイルの場所を開くToolStripMenuItem,
             this.終了ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(99, 26);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(195, 70);
             // 
             // 終了ToolStripMenuItem
             // 
             this.終了ToolStripMenuItem.Name = "終了ToolStripMenuItem";
-            this.終了ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.終了ToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.終了ToolStripMenuItem.Text = "終了";
             this.終了ToolStripMenuItem.Click += new System.EventHandler(this.終了ToolStripMenuItem_Click);
+            // 
+            // ファイルの場所を開くToolStripMenuItem
+            // 
+            this.ファイルの場所を開くToolStripMenuItem.Name = "ファイルの場所を開くToolStripMenuItem";
+            this.ファイルの場所を開くToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.ファイルの場所を開くToolStripMenuItem.Text = "設定ファイルの場所を開く";
+            this.ファイルの場所を開くToolStripMenuItem.Click += new System.EventHandler(this.ファイルの場所を開くToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -101,6 +110,7 @@
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 終了ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ファイルの場所を開くToolStripMenuItem;
     }
 }
 

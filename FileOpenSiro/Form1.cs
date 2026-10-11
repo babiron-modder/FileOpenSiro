@@ -238,5 +238,15 @@ namespace FileOpenSiro
                 }
             }
         }
+
+        private void ファイルの場所を開くToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var app = new ProcessStartInfo();
+            app.FileName = "explorer";
+            app.WorkingDirectory = Environment.CurrentDirectory;
+            app.Arguments = AppContext.BaseDirectory;
+            app.UseShellExecute = true;
+            Process.Start(app);
+        }
     }
 }
